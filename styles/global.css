@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --menu-color: #1b92d3;
+    font-family: "Roboto", serif;
+    font-style: normal;
+}
+
+:root {
+    line-height: calc(1em + 0.5rem);
+}
+  
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+}
+  
+ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+  
+h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+p {
+    text-wrap: pretty;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+  
+* {
+    font-family: "Inter", serif;
+    box-sizing: border-box;
+}
+  
+.books {
+    height: 100vh;
+    background-color: #FCECEC;
+
+}
+  
+.books__subtitle-text {
+    font-weight: 400;
+    font-size: 13px;
+    color: #7A7A7A;
+}
+  
+.books__subtitle {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+}
+  
+.books__title-text {
+    font-size: 48px;
+    font-weight: 700;
+    color: #393280;
+}
+  
+.books__title-line {
+    width: 30vw;
+    height: 1px;
+    background-color: #E0E0E0;
+}
+  
+.books__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.books__main {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(200px,1fr));
+    padding: 20px;
+    gap: 20px;
+}
+
+.book__background {
+    background-color: white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* .book__background-img {
+    width: 228px;
+    height: 329px;
+} */
+
+.book {
+
+}
+
+.book__name {
+    font-weight: 700;
+    font-size: 22px;
+    color: #393280;
+    text-align: center;
+}
+
+.book__author {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-weight: 350;
+    font-size: 14px;
+    color: #7A7A7A;
+    text-align: center;
+}
+
+.book__progres {
+    font-weight: 750;
+    font-size: 18px;
+    color: #ED553B;
+    text-align: center;
+}
+
+.line {
+    width: 100vw;
+    height: 1px;
+    background-color: #E0E0E0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button__add {
+    margin-top: 20px;
+    width: 257px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #ED553B;
+    font-weight: 600;
+    font-size: 16px;
+    color:white;
+    border: none;
+}

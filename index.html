@@ -23,25 +23,29 @@
             </div>
             <div class="books__main">
                 <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/Group 298.png" alt=""> </img></div>
+                    <div class="book__background"><img class="book__background-img" src="./assets/img/Group 298.png"
+                            alt=""> </img></div>
                     <div class="book__name">A simple way to live in parts</div>
                     <div class="book__author">Armor Ramsey</div>
                     <div class="book__progres">Прогресс: 27%</div>
                 </div>
                 <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book3 4.png" alt=""> </img></div>
+                    <div class="book__background"><img class="book__background-img" src="./assets/img/book3 4.png"
+                            alt=""> </img></div>
                     <div class="book__name">Great travel a desert</div>
                     <div class="book__author">Sanchit Howdy</div>
                     <div class="book__progres">Прогресс: 34%</div>
                 </div>
                 <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book16 1.png" alt=""> </img></div>
+                    <div class="book__background"><img class="book__background-img" src="./assets/img/book16 1.png"
+                            alt=""> </img></div>
                     <div class="book__name">The lady beauty Scarlett</div>
                     <div class="book__author">Arthur Doyle</div>
                     <div class="book__progres">Прогресс: 17%</div>
                 </div>
                 <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book4 4.png" alt=""> </img></div>
+                    <div class="book__background"><img class="book__background-img" src="./assets/img/book4 4.png"
+                            alt=""> </img></div>
                     <div class="book__name">Once upon a time</div>
                     <div class="book__author">Klien Marry</div>
                     <div class="book__progres">Прогресс: 52%</div>
@@ -50,10 +54,62 @@
             <div class="line"></div>
             <div class="button"><button class="button__add">ДОБАВИТЬ КНИГУ</button></div>
         </div>
+
     </section>
 
+    <div class="form hidden">
+        <div class="form__background">
+        <div class="form__main">
+            <div class="form__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <path
+                        d="M16.1186 12.4992L25.4932 3.15163C25.7511 2.89431 25.8934 2.55102 25.8938 2.18496C25.8938 1.8187 25.7515 1.475 25.4932 1.21809L24.6717 0.399187C24.4135 0.14126 24.0691 0 23.7016 0C23.3347 0 22.9904 0.14126 22.7321 0.399187L13.3573 9.74618L3.98222 0.399187C3.72434 0.14126 3.37984 0 3.0125 0C2.64556 0 2.30105 0.14126 2.04318 0.399187L1.22125 1.21809C0.686342 1.75143 0.686342 2.61891 1.22125 3.15163L10.5962 12.4992L1.22125 21.8464C0.963172 22.1041 0.821087 22.4474 0.821087 22.8134C0.821087 23.1795 0.963172 23.5228 1.22125 23.7803L2.04297 24.5992C2.30084 24.8569 2.64556 24.9984 3.01229 24.9984C3.37963 24.9984 3.72414 24.8569 3.98201 24.5992L13.3571 15.2521L22.7319 24.5992C22.9902 24.8569 23.3345 24.9984 23.7014 24.9984C24.0685 24.9984 24.4133 24.8569 24.6715 24.5992L25.493 23.7803C25.7509 23.523 25.8932 23.1795 25.8932 22.8134C25.8932 22.4474 25.7509 22.1041 25.493 21.8466L16.1186 12.4992Z"
+                        fill="#393280" />
+                </svg>
+            </div>
+            <div class="form__input">
+
+                <div class="form__subtitle">
+                    <h1 class="form__heading">Добавить книгу</h1>
+                </div>
+                <form action="">
+                    <div class="form__group">
+                        <label for="book__title">Название книги</label>
+                        <input type="text" id="book__title" name="title" placeholder="Введите название книги" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="book__uthor">Автор</label>
+                        <input type="text" id="book__author" name="author" placeholder="Введите автора книги" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="book__pages">Количество страниц</label>
+                        <input type="number" id="book__pages" name="pages"
+                            placeholder="Укажите общее количество страниц">
+                    </div>
+                    <div class="form__group">
+                        <label for="book__pages">Ваш прогресс чтения</label>
+                        <input type="number" id="book__pages" name="pages" placeholder="Укажите прочитанную страницу">
+                    </div>
+                    <input type="file" id="book__cover" name="cover" accept="image/png, image/jpeg" hidden>
+                    <label for="book__cover" class="custom__download"> 
+                        <img class="custom__download-img" src="./assets/img/image 1.png" alt="">
+                        <p class="custom__download-text">Загрузить
+                            обложку</p>
+                    </label>
+
+                    <button class="add__book" type="submit">Добавить книгу</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
+    </div>
+
+    <script src="./src/js/sctipt.js"></script>
 </body>
 
 </html>

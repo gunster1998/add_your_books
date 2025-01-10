@@ -47,6 +47,7 @@ svg {
 }
 
 body {
+    background-color: #FCECEC;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
@@ -148,10 +149,10 @@ h6 {
     margin-bottom: 15px;
 }
 
-/* .book__background-img {
-    width: 228px;
-    height: 329px;
-} */
+.book__background-img {
+    max-width: 290px;
+    max-height: 394px;
+}
 
 .book {}
 

@@ -22,34 +22,6 @@
                 <div class="books__title-line"></div>
             </div>
             <div class="books__main">
-                <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/Group 298.png"
-                            alt=""> </img></div>
-                    <div class="book__name">A simple way to live in parts</div>
-                    <div class="book__author">Armor Ramsey</div>
-                    <div class="book__progres">Прогресс: 27%</div>
-                </div>
-                <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book3 4.png"
-                            alt=""> </img></div>
-                    <div class="book__name">Great travel a desert</div>
-                    <div class="book__author">Sanchit Howdy</div>
-                    <div class="book__progres">Прогресс: 34%</div>
-                </div>
-                <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book16 1.png"
-                            alt=""> </img></div>
-                    <div class="book__name">The lady beauty Scarlett</div>
-                    <div class="book__author">Arthur Doyle</div>
-                    <div class="book__progres">Прогресс: 17%</div>
-                </div>
-                <div class="book">
-                    <div class="book__background"><img class="book__background-img" src="./assets/img/book4 4.png"
-                            alt=""> </img></div>
-                    <div class="book__name">Once upon a time</div>
-                    <div class="book__author">Klien Marry</div>
-                    <div class="book__progres">Прогресс: 52%</div>
-                </div>
             </div>
             <div class="line"></div>
             <div class="button"><button class="button__add">ДОБАВИТЬ КНИГУ</button></div>
@@ -72,7 +44,7 @@
                 <div class="form__subtitle">
                     <h1 class="form__heading">Добавить книгу</h1>
                 </div>
-                <form action="">
+                <form id="form__book" action="">
                     <div class="form__group">
                         <label for="book__title">Название книги</label>
                         <input type="text" id="book__title" name="title" placeholder="Введите название книги" required>
@@ -88,7 +60,7 @@
                     </div>
                     <div class="form__group">
                         <label for="book__pages">Ваш прогресс чтения</label>
-                        <input type="number" id="book__pages" name="pages" placeholder="Укажите прочитанную страницу">
+                        <input type="number" id="book__pages" name="progress" placeholder="Укажите прочитанную страницу">
                     </div>
                     <input type="file" id="book__cover" name="cover" accept="image/png, image/jpeg" hidden>
                     <label for="book__cover" class="custom__download"> 

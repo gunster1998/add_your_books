@@ -317,3 +317,12 @@ label {
 .hidden {
     display: none;
 }
+
+.green {
+    color: green;
+}
+
+.custom__download.dragover {
+  background-color: #e0e0e0; 
+  border: 1px solid #ED553B;; 
+}

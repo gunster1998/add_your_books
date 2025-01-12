@@ -193,7 +193,7 @@ h6 {
 }
 
 .button__add,
-.add__book     {
+.add__book {
     margin-top: 20px;
     width: 257px;
     height: 50px;
@@ -302,7 +302,7 @@ label {
 }
 
 .form__background {
-    position: fixed; 
+    position: fixed;
     top: 0px;
     left: 0px;
 
@@ -323,6 +323,24 @@ label {
 }
 
 .custom__download.dragover {
-  background-color: #e0e0e0; 
-  border: 1px solid #ED553B;; 
+    background-color: #e0e0e0;
+    border: 1px solid #ED553B;
+}
+
+.button__delete {
+    width: 134px;
+    height: 38px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: #EE204D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
 }

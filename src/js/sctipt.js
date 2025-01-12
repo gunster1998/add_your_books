@@ -48,6 +48,24 @@ fileInputLabel.addEventListener('dragleave', function(event) {
   fileInputLabel.classList.remove('dragover'); 
 });
 
+function deleteButton(index) {
+  myLibrary.splice(index,1);
+  updateBook();
+}
+
+
+function addDeleteEvent() {
+  const deleteButtons = document.querySelectorAll('.button__delete')
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const bookIndex = parseInt(button.getAttribute('data-index'));
+      deleteButton(bookIndex);
+    })
+  })
+}
+
+
 function updateBook() {
   const booksBlock = document.querySelector('.books__main')
 
@@ -58,9 +76,10 @@ function updateBook() {
                     <div class="book__name">${myLibrary[i].name}</div>
                     <div class="book__author">${myLibrary[i].author}</div>
                     <div class="book__progres">Прогресс: ${ progress(myLibrary[i].totalPage,myLibrary[i].progressPage)}%</div>
+                    <button class="button__delete" data-index="${i}">УДАЛИТЬ</button>
                 </div>`
-    console.log(myLibrary[i].Book)
   }
+  addDeleteEvent();
 }
 
 function Book(name,author,totalPage,progressPage,image) {

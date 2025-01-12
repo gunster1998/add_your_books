@@ -7,19 +7,22 @@ const myLibrary = [{
   "author": "Armor Ramsey",
   "totalPage": 200,
   "progressPage": 87,
-  "image": "./assets/img/Group 298.png"
+  "image": "./assets/img/Group 298.png",
+  "read": false
 },{
   "name": "Great travel a desert",
   "author": "Sanchit Howdy",
   "totalPage": 145,
   "progressPage": 87,
-  "image": "./assets/img/book3 4.png"
+  "image": "./assets/img/book3 4.png",
+  "read": false
 },{
   "name": "The lady beauty Scarlett",
   "author": "Arthur Doyle",
   "totalPage": 145,
   "progressPage": 20,
-  "image": "./assets/img/book16 1.png"
+  "image": "./assets/img/book16 1.png",
+  "read": false
 }
 ]
 
@@ -48,6 +51,11 @@ fileInputLabel.addEventListener('dragleave', function(event) {
   fileInputLabel.classList.remove('dragover'); 
 });
 
+function statusButton(index) {
+  myLibrary[index].read =  !myLibrary[index].read
+  updateBook();
+}
+
 function deleteButton(index) {
   myLibrary.splice(index,1);
   updateBook();
@@ -65,6 +73,17 @@ function addDeleteEvent() {
   })
 }
 
+function addStatusEvent() {
+  const statusButtons = document.querySelectorAll('.button__status')
+
+  statusButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const bookIndex = parseInt(button.getAttribute('data-index'));
+      statusButton(bookIndex)
+    })
+  })
+}
+
 
 function updateBook() {
   const booksBlock = document.querySelector('.books__main')
@@ -76,18 +95,21 @@ function updateBook() {
                     <div class="book__name">${myLibrary[i].name}</div>
                     <div class="book__author">${myLibrary[i].author}</div>
                     <div class="book__progres">Прогресс: ${ progress(myLibrary[i].totalPage,myLibrary[i].progressPage)}%</div>
-                    <button class="button__delete" data-index="${i}">УДАЛИТЬ</button>
+                    <div class="book__status book__progres">Статус: ${myLibrary[i].read ? 'Прочитана' : 'Читаю'}</div>
+                    <div class="center"><button class="button__delete" data-index="${i}">УДАЛИТЬ</button><button class="button__status" data-index="${i}">ИЗМЕНИТЬ СТАТУС</button></div>
                 </div>`
   }
   addDeleteEvent();
+  addStatusEvent();
 }
 
-function Book(name,author,totalPage,progressPage,image) {
+function Book(name,author,totalPage,progressPage,image,result) {
   this.name = name;
   this.author = author;
   this.totalPage = totalPage;
   this.progressPage = progressPage;
   this.image = result_photo || './assets/img/no_img.jpg'
+  this.read = false
 }
 
 function progress(totalPages,progress) {
